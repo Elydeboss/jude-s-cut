@@ -1,0 +1,148 @@
+/*
+	Jude's Cut, plain CSS layer.
+	Only what Tailwind utilities do not cover: focus rings, the skip link,
+	scrollbar hiding, the shared photo treatment, and the motion system.
+
+	Locks (page-wide, intentional):
+	- ONE theme: light cream. Locked per brief; no dark mode.
+	- ONE accent: royal blue, identically in every section.
+	- Shape system: buttons pill, media 24px (rounded-3xl), the hero arch is the
+	  single signature shape.
+*/
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	/* clip, not hidden: no scroll container is created, so position: sticky keeps working */
+	overflow-x: clip;
+}
+
+/* Shared photo treatment so mixed placeholder photography reads as one system. */
+.photo {
+	filter: saturate(0.88) contrast(1.03);
+	background-color: var(--color-cream-deep);
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-royal);
+	outline-offset: 3px;
+}
+
+/* Royal focus ring on the royal band would vanish; flip to cream there. */
+#cta :focus-visible {
+	outline-color: var(--color-cream);
+}
+
+.scrollbar-none:focus-visible {
+	outline-offset: -2px;
+}
+
+.skip {
+	position: absolute;
+	top: -3.5rem;
+	left: 1.25rem;
+	z-index: 100;
+	background: var(--color-royal);
+	color: var(--color-cream);
+	padding: 0.6rem 1.1rem;
+	border-radius: 999px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: top 0.2s ease;
+}
+
+.skip:focus {
+	top: 1rem;
+}
+
+.scrollbar-none {
+	scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+	display: none;
+}
+
+/*
+	Scroll reveal. script.js adds .is-in once per element via IntersectionObserver;
+	never a scroll listener. --reveal-delay staggers siblings.
+*/
+.reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition:
+		opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal.is-in {
+	opacity: 1;
+	transform: none;
+}
+
+/* Hero entrance cascade. Load-once, then the page is still. */
+@media (prefers-reduced-motion: no-preference) {
+	.hero-rise {
+		opacity: 0;
+		animation: hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	}
+
+	.hero-rise-1 { animation-delay: 0.05s; }
+	.hero-rise-2 { animation-delay: 0.15s; }
+	.hero-rise-3 { animation-delay: 0.25s; }
+	.hero-rise-4 { animation-delay: 0.35s; }
+	.hero-rise-5 { animation-delay: 0.2s; }
+}
+
+@keyframes hero-rise {
+	from {
+		opacity: 0;
+		transform: translateY(26px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/*
+	Hero poster drift. CSS scroll-driven animation where supported; the photo simply
+	holds its scale everywhere else. Transform-only, reduced-motion safe.
+	(RETIRED with the full-bleed hero — kept here in case the poster layout returns.)
+*/
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		.hero-drift {
+			animation: hero-drift linear both;
+			animation-timeline: scroll(root);
+			animation-range: 0 130vh;
+		}
+	}
+}
+
+@keyframes hero-drift {
+	from {
+		transform: scale(1.06);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}

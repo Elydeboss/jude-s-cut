@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Jude's Cut | Dress the part</title>
+		<meta
+			name="description"
+			content="Jude's Cut. Menswear cut properly. Agbada, senator sets and pant trousers, made to be worn every week."
+		/>
+		<meta name="theme-color" content="#f6f1e7" />
+		<meta property="og:title" content="Jude's Cut | Dress the part" />
+		<meta
+			property="og:description"
+			content="Menswear cut properly. Agbada, senator sets and pant trousers, made to be worn every week."
+		/>
+		<meta property="og:type" content="website" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<!-- Type: Outfit variable, display swap. (Self-host these files if you later add a build step.) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icons: Phosphor regular weight, CDN. -->
+		<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+		<!-- Tailwind v4 browser build: no install, no build step. See README for the production note. -->
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<style type="text/tailwindcss">
+			@theme {
+				--color-cream: #f6f1e7;
+				--color-cream-deep: #eae2d0;
+				--color-ink: #1a1e26;
+				--color-ink-soft: #565d6e;
+				--color-royal: #00022e;
+				--color-royal-deep: #14175c;
+				--font-sans: 'Outfit', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+			}
+		</style>
+
+		<link rel="stylesheet" href="styles.css" />
+
+		<noscript>
+			<style>
+				/* Without JS the scroll reveal never fires, so show everything. */
+				.reveal {
+					opacity: 1 !important;
+					transform: none !important;
+				}
+			</style>
+		</noscript>
+
+		<script src="script.js" defer></script>
+	</head>
+
+	<body class="bg-cream font-sans leading-relaxed text-ink antialiased">
+		<a class="skip" href="#main">Skip to content</a>
+
+		<header class="sticky top-0 z-50 border-b border-ink/15 bg-cream/90 backdrop-blur-md">
+			<nav class="mx-auto flex h-18 max-w-7xl items-center justify-between px-6" aria-label="Primary">
+				<a class="text-[1.3rem] font-semibold tracking-tight" href="#main">
+					Jude&rsquo;s <span class="text-royal">Cut</span>
+				</a>
+
+				<div class="hidden items-center gap-9 text-[0.95rem] font-medium text-ink-soft md:flex">
+					<a class="transition-colors hover:text-ink" href="shop.html">Shop</a>
+					<a class="transition-colors hover:text-ink" href="#shop">Range</a>
+					<a class="transition-colors hover:text-ink" href="#bestsellers">Best sellers</a>
+					<a class="transition-colors hover:text-ink" href="#contact">Contact</a>
+				</div>
+
+				<button
+					class="-mr-2 p-2 text-2xl md:hidden"
+					type="button"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					data-menu-button
+				>
+					<span class="sr-only">Open menu</span>
+					<i class="ph ph-list" aria-hidden="true" data-menu-icon></i>
+				</button>
+			</nav>
+
+			<div class="hidden border-b border-ink/15 bg-cream px-6 pb-6 pt-2 md:hidden" id="mobile-menu" data-menu-panel>
+				<div class="flex flex-col">
+					<a class="border-b border-ink/10 py-3 text-[1.05rem] font-medium" href="shop.html">Shop</a>
+					<a class="border-b border-ink/10 py-3 text-[1.05rem] font-medium" href="#shop">Range</a>
+					<a class="border-b border-ink/10 py-3 text-[1.05rem] font-medium" href="#bestsellers">Best sellers</a>
+					<a class="border-b border-ink/10 py-3 text-[1.05rem] font-medium" href="#promise">Fit promise</a>
+					<a class="py-3 text-[1.05rem] font-medium" href="#contact">Contact</a>
+				</div>
+			</div>
+		</header>
+
+		<main id="main">
+			<!-- Hero. Layout family: full-bleed poster. Photo fills the section, cream scrim left, poster type on top.
+			     Stack discipline unchanged: eyebrow, headline, subtext, one CTA. -->
+			<section class="relative flex min-h-[calc(100svh-72px)] items-center overflow-hidden">
+				<img
+					alt="Agbada and kaftan sets on mannequins in the Jude's Cut studio"
+					class="hero-drift photo absolute inset-0 h-full w-full object-cover"
+					width="404"
+					height="316"
+					fetchpriority="high"
+					src="images/image-judecuts.jpg"
+				/>
+				<!-- Scrim: solid cream under the text column, opening up to the photo. Mobile keeps a stronger veil. -->
+				<div
+					class="absolute inset-0 bg-[linear-gradient(90deg,#f6f1e7_0%,rgba(246,241,231,0.96)_45%,rgba(246,241,231,0.8)_100%)] lg:bg-[linear-gradient(90deg,#f6f1e7_0%,rgba(246,241,231,0.92)_42%,rgba(246,241,231,0)_74%)]"
+					aria-hidden="true"
+				></div>
+
+				<div class="relative mx-auto w-full max-w-7xl px-6 py-20 lg:py-24">
+					<p class="hero-rise hero-rise-1 text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-royal">
+						New season
+					</p>
+					<h1 class="hero-rise hero-rise-2 mt-6 max-w-[12ch] text-[clamp(3.5rem,9vw,7.5rem)] font-semibold leading-[0.98] tracking-[-0.035em]">
+						Dress the part.
+					</h1>
+					<p class="hero-rise hero-rise-3 mt-6 max-w-[26rem] text-lg text-ink-soft">
+						Menswear cut properly. Agbada, senator sets and pant trousers made to be worn every week,
+						not once.
+					</p>
+					<a
+						class="hero-rise hero-rise-4 group mt-9 inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-royal px-7 py-4 font-semibold text-cream transition-[background-color,transform] duration-200 hover:bg-royal-deep active:scale-[0.98]"
+						href="shop.html"
+					>
+						Shop the collection
+						<i class="ph ph-arrow-right transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1" aria-hidden="true"></i>
+					</a>
+				</div>
+			</section>
+
+			<!-- Range. Layout family: asymmetric image grid (1 tall + 2 small + 1 wide). -->
+			<section class="py-[clamp(5rem,11vw,9rem)]" id="shop">
+				<div class="mx-auto max-w-7xl px-6">
+					<header class="reveal mb-10 max-w-[44rem] lg:mb-16">
+						<h2 class="text-[clamp(2rem,4vw,2.9rem)] font-semibold tracking-[-0.025em]">Start with the range</h2>
+						<p class="mt-4 max-w-[32rem] text-[1.05rem] text-ink-soft">
+							Four categories, one fit standard. Every piece is cut from the same block, so your size is your size.
+						</p>
+					</header>
+
+					<ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+						<li class="reveal group lg:row-span-2">
+							<figure class="flex h-full flex-col gap-4">
+								<div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-cream-deep lg:aspect-auto lg:min-h-0 lg:flex-1">
+									<img
+										alt="Agbada from the Jude's Cut range"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="900"
+										height="1100"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1776880471112-708c211e6a4b?q=80&w=900&h=1100&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[1.15rem] font-semibold tracking-[-0.01em]">Agbada</h3>
+									<p class="mt-1 text-[0.95rem] text-ink-soft">Flowing agbada with hand-finished embroidery.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="reveal group" data-reveal-delay="70">
+							<figure class="flex h-full flex-col gap-4">
+								<div class="relative aspect-[4/3] overflow-hidden rounded-3xl bg-cream-deep">
+									<img
+										alt="Senator wear from the Jude's Cut range"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="900"
+										height="1100"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1751374858042-b8b9ff8480aa?q=80&w=900&h=1100&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[1.15rem] font-semibold tracking-[-0.01em]">Senator wear</h3>
+									<p class="mt-1 text-[0.95rem] text-ink-soft">The two-piece standard for every serious occasion.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="reveal group" data-reveal-delay="140">
+							<figure class="flex h-full flex-col gap-4">
+								<div class="relative aspect-[4/3] overflow-hidden rounded-3xl bg-cream-deep">
+									<img
+										alt="Pant trousers from the Jude's Cut range"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="900"
+										height="1100"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1791892135406-fbb706896cbe?q=80&w=900&h=1100&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[1.15rem] font-semibold tracking-[-0.01em]">Trousers</h3>
+									<p class="mt-1 text-[0.95rem] text-ink-soft">Pant trousers cut clean for native or formal.</p>
+								</figcaption>
+							</figure>
+						</li>
+
+						<li class="reveal group lg:col-span-2" data-reveal-delay="210">
+							<figure class="flex h-full flex-col gap-4">
+								<div class="relative aspect-[16/8] overflow-hidden rounded-3xl bg-cream-deep">
+									<img
+										alt="Ankara sets from the Jude's Cut range"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="900"
+										height="1100"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1790862303813-8fdee084284d?q=80&w=900&h=1100&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[1.15rem] font-semibold tracking-[-0.01em]">Ankara sets</h3>
+									<p class="mt-1 text-[0.95rem] text-ink-soft">Matching wax-print sets, cut sharp.</p>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Best sellers. Layout family: uniform product grid (3 across desktop, 5 items). Card anatomy mirrors
+			     the reference: category tag above the image, portrait image, name, price. -->
+			<section class="py-[clamp(5rem,11vw,9rem)]" id="bestsellers">
+				<div class="mx-auto max-w-7xl px-6">
+					<header class="reveal mx-auto mb-12 max-w-xl text-center lg:mb-16">
+						<p class="eyebrow">Customer favorites</p>
+						<h2 class="mt-3 text-[clamp(2rem,4vw,2.9rem)] font-semibold tracking-[-0.025em]">Best Sellers</h2>
+						<p class="mt-4 text-[1.05rem] text-ink-soft">The five pieces our customers keep coming back for.</p>
+					</header>
+
+					<ul class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+						<li class="reveal group">
+							<a class="block" href="shop.html">
+								<figure class="flex flex-col gap-2">
+									<p class="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Agbada</p>
+								<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-cream-deep">
+									<img
+										alt="The Emerald Agbada, a Jude's Cut best seller"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="640"
+										height="840"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1663044022557-7d5d4c1d5318?q=80&w=640&h=840&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[0.95rem] font-semibold tracking-[-0.01em]">The Emerald Agbada</h3>
+									<p class="mt-1 text-[0.95rem] text-[0.85rem] text-ink-soft">$260</p>
+								</figcaption>
+								</a>
+							</figure>
+						</li>
+
+						<li class="reveal group" data-reveal-delay="60">
+							<a class="block" href="shop.html">
+								<figure class="flex flex-col gap-2">
+									<p class="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Senator wear</p>
+								<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-cream-deep">
+									<img
+										alt="The Sky Senator, a Jude's Cut best seller"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="640"
+										height="840"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1751374881982-2a69257bd207?q=80&w=640&h=840&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[0.95rem] font-semibold tracking-[-0.01em]">The Sky Senator</h3>
+									<p class="mt-1 text-[0.95rem] text-[0.85rem] text-ink-soft">$120</p>
+								</figcaption>
+								</a>
+							</figure>
+						</li>
+
+						<li class="reveal group" data-reveal-delay="120">
+							<a class="block" href="shop.html">
+								<figure class="flex flex-col gap-2">
+									<p class="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Kaftans</p>
+								<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-cream-deep">
+									<img
+										alt="The Kente Panel, a Jude's Cut best seller"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="640"
+										height="840"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1663043994777-7ed4b4e6cba3?q=80&w=640&h=840&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[0.95rem] font-semibold tracking-[-0.01em]">The Kente Panel</h3>
+									<p class="mt-1 text-[0.95rem] text-[0.85rem] text-ink-soft">$140</p>
+								</figcaption>
+								</a>
+							</figure>
+						</li>
+
+						<li class="reveal group" data-reveal-delay="180">
+							<a class="block" href="shop.html">
+								<figure class="flex flex-col gap-2">
+									<p class="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Two-piece</p>
+								<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-cream-deep">
+									<img
+										alt="The Forest Set, a Jude's Cut best seller"
+										class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+										width="640"
+										height="840"
+										loading="lazy"
+										src="https://images.unsplash.com/photo-1663044022726-889ee51a682e?q=80&w=640&h=840&fit=crop&auto=format"
+									/>
+								</div>
+								<figcaption>
+									<h3 class="text-[0.95rem] font-semibold tracking-[-0.01em]">The Forest Set</h3>
+									<p class="mt-1 text-[0.95rem] text-[0.85rem] text-ink-soft">$150</p>
+								</figcaption>
+								</a>
+							</figure>
+						</li>
+
+						<li class="reveal group" data-reveal-delay="240">
+							<a class="block" href="shop.html">
+								<figure class="flex flex-col gap-2">
+									<p class="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Senator wear</p>
+									<div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-cream-deep">
+										<img
+											alt="The Emerald Senator, a Jude's Cut best seller"
+											class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+											width="640"
+											height="840"
+											loading="lazy"
+											src="https://images.unsplash.com/photo-1648328168368-3a25f2152802?q=80&w=640&h=840&fit=crop&auto=format"
+										/>
+									</div>
+									<figcaption>
+										<h3 class="text-[0.95rem] font-semibold tracking-[-0.01em]">The Emerald Senator</h3>
+										<p class="mt-1 text-[0.95rem] text-[0.85rem] text-ink-soft">$180</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+					</ul>
+
+					<div class="reveal mt-14 text-center">
+						<a
+							class="group inline-flex items-center gap-2 font-semibold text-royal transition-colors hover:text-royal-deep"
+							href="shop.html"
+						>
+							Shop the collection
+							<i class="ph ph-arrow-right transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Fit promise. Layout family: image + stacked points split (the page's only zigzag). -->
+			<section class="py-[clamp(5rem,11vw,9rem)]" id="promise">
+				<div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+					<div class="reveal order-1 lg:order-2">
+						<header class="mb-6 max-w-[44rem]">
+							<h2 class="text-[clamp(2rem,4vw,2.9rem)] font-semibold tracking-[-0.025em]">The fit promise</h2>
+							<p class="mt-4 max-w-[32rem] text-[1.05rem] text-ink-soft">
+								Buying clothes online shouldn&rsquo;t feel like a gamble. Three commitments, no small print.
+							</p>
+						</header>
+
+						<ul class="divide-y divide-ink/10">
+							<li class="reveal flex items-start gap-4 py-6">
+								<i class="ph ph-ruler mt-1 text-[1.6rem] text-royal" aria-hidden="true"></i>
+								<div>
+									<h3 class="text-xl font-semibold">Two fits, every style</h3>
+									<p class="mt-1 max-w-[30rem] text-ink-soft">Slim and relaxed, S to XXL, backed by a measured size guide.</p>
+								</div>
+							</li>
+							<li class="reveal flex items-start gap-4 py-6" data-reveal-delay="80">
+								<i class="ph ph-scissors mt-1 text-[1.6rem] text-royal" aria-hidden="true"></i>
+								<div>
+									<h3 class="text-xl font-semibold">Cut, not scaled</h3>
+									<p class="mt-1 max-w-[30rem] text-ink-soft">Each pattern is drafted to its own size instead of stretched from a single sample.</p>
+								</div>
+							</li>
+							<li class="reveal flex items-start gap-4 py-6" data-reveal-delay="160">
+								<i class="ph ph-arrows-counter-clockwise mt-1 text-[1.6rem] text-royal" aria-hidden="true"></i>
+								<div>
+									<h3 class="text-xl font-semibold">Free returns for 30 days</h3>
+									<p class="mt-1 max-w-[30rem] text-ink-soft">If the fit is off, send it back within 30 days and we cover the postage.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="reveal order-2 lg:order-1" data-reveal-delay="80">
+						<img
+							alt="Bolts of African wax print fabric at the Jude's Cut studio"
+							class="photo aspect-[4/5] w-full rounded-3xl object-cover"
+							width="1000"
+							height="1250"
+							loading="lazy"
+							src="https://images.unsplash.com/photo-1768212565424-efa3a3852b81?q=80&w=1000&h=1250&fit=crop&auto=format"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Quote. Layout family: centered single-quote band. -->
+			<section class="py-[clamp(5rem,11vw,9rem)]">
+				<div class="reveal mx-auto max-w-7xl px-6">
+					<blockquote class="mx-auto max-w-[46rem] text-center">
+						<div class="mx-auto mb-9 h-[3px] w-12 rounded-full bg-royal" aria-hidden="true"></div>
+						<p class="text-[clamp(1.45rem,3vw,2.1rem)] font-medium leading-snug tracking-[-0.015em]">
+							&ldquo;The Grand Agbada arrived on Tuesday. It fits like it was measured, not guessed, and
+							it has not left heavy rotation since.&rdquo;
+						</p>
+						<footer class="mt-7 text-[0.95rem] text-ink-soft">Daniel Osei, customer since 2024</footer>
+					</blockquote>
+				</div>
+			</section>
+
+			<!-- CTA. Layout family: full-width royal color band. Same shop intent, same label as the hero. -->
+			<section class="bg-royal py-[clamp(4.5rem,9vw,7rem)] text-cream" id="cta">
+				<div class="reveal mx-auto grid max-w-7xl justify-items-center gap-6 px-6 text-center">
+					<h2 class="text-[clamp(2.2rem,4.5vw,3.4rem)] font-semibold leading-[1.05] tracking-[-0.03em]">
+						Ready to dress the part?
+					</h2>
+					<p class="text-cream/85">Free delivery on your first order and free returns for 30 days.</p>
+					<a
+						class="group mt-2 inline-flex items-center gap-2.5 whitespace-nowrap rounded-full bg-cream px-7 py-4 font-semibold text-royal-deep transition-[background-color,transform] duration-200 hover:bg-cream-deep active:scale-[0.98]"
+						href="#shop"
+					>
+						Shop the collection
+						<i class="ph ph-arrow-right transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1" aria-hidden="true"></i>
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="border-t border-ink/15 pt-12 lg:pt-18" id="contact">
+			<div class="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.4fr_1fr_1fr]">
+				<div>
+					<a class="text-[1.3rem] font-semibold tracking-tight" href="#main">Jude&rsquo;s <span class="text-royal">Cut</span></a>
+					<p class="mt-3 text-ink-soft">Menswear cut properly.</p>
+				</div>
+
+				<nav aria-label="Footer">
+					<h3 class="mb-3 text-base font-semibold">Explore</h3>
+					<div class="flex flex-col items-start gap-2 text-[0.95rem] text-ink-soft">
+						<a class="transition-colors hover:text-ink" href="#shop">Range</a>
+						<a class="transition-colors hover:text-ink" href="#bestsellers">Best sellers</a>
+						<a class="transition-colors hover:text-ink" href="#promise">Fit promise</a>
+					</div>
+				</nav>
+
+				<div>
+					<h3 class="mb-3 text-base font-semibold">Contact</h3>
+					<div class="flex flex-col items-start gap-2">
+						<a class="text-[0.95rem] text-ink-soft transition-colors hover:text-ink" href="mailto:hello@judescut.com">hello@judescut.com</a>
+						<p class="text-[0.9rem] text-ink-soft">Replies within one business day.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mx-auto mt-12 flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-ink/15 px-6 py-7 text-[0.85rem] text-ink-soft">
+				<p>&copy; 2026 Jude&rsquo;s Cut</p>
+				<p>Dress the part.</p>
+			</div>
+		</footer>
+	</body>
+</html>

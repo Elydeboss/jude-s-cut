@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jude's Cut | Pick a direction</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f6f1e7;
+        --cream-deep: #eae2d0;
+        --ink: #1a1e26;
+        --ink-soft: #565d6e;
+        --royal: #1e3fbe;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 3rem 1.5rem;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Outfit", system-ui, sans-serif;
+      }
+
+      .wrap {
+        width: min(880px, 100%);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        letter-spacing: -0.025em;
+        font-weight: 600;
+      }
+
+      .kicker {
+        margin: 0 0 1rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--royal);
+      }
+
+      .sub {
+        margin: 1rem 0 3rem;
+        color: var(--ink-soft);
+        max-width: 34rem;
+      }
+
+      .options {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 700px) {
+        .options {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      a.option {
+        display: block;
+        padding: 2rem;
+        border: 1px solid rgba(26, 30, 38, 0.18);
+        text-decoration: none;
+        color: inherit;
+        transition:
+          border-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      a.option:hover {
+        border-color: var(--royal);
+        transform: translateY(-2px);
+      }
+
+      .swatch {
+        display: flex;
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .swatch span {
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 1px solid rgba(26, 30, 38, 0.18);
+      }
+
+      .option h2 {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+      }
+
+      .option p {
+        margin: 0.6rem 0 0;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        line-height: 1.55;
+      }
+
+      .open {
+        display: inline-block;
+        margin-top: 1.4rem;
+        font-weight: 600;
+        color: var(--royal);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="kicker">Jude&rsquo;s Cut</p>
+      <h1>Two directions, one brand.</h1>
+      <p class="sub">
+        Same products, same copy, same photography. Pick the art direction; the
+        winning variant becomes the site.
+      </p>
+
+      <div class="options">
+        <a class="option" href="index.html">
+          <div class="swatch" aria-hidden="true">
+            <span style="background: #f6f1e7"></span>
+            <span style="background: #00022e"></span>
+            <span style="background: #1a1e26"></span>
+          </div>
+          <h2>Variant A, Warm gallery</h2>
+          <p>
+            Cream canvas, soft 24px corners, arched and pill shapes, full-bleed
+            poster hero, best sellers grid. Light, airy, editorial.
+          </p>
+          <span class="open">Open Variant A &rarr;</span>
+        </a>
+
+        <a class="option" href="variant-b/index.html">
+          <div class="swatch" aria-hidden="true">
+            <span style="background: #12151d"></span>
+            <span style="background: #00022e"></span>
+            <span style="background: #f3eee2"></span>
+          </div>
+          <h2>Variant B, Midnight boutique</h2>
+          <p>
+            Deep ink canvas with soft rounded cards and pill buttons, headline
+            block above a large rounded photograph, soft index-row range, offset
+            product grid, rounded royal panel. Quiet, after-dark premium.
+          </p>
+          <span class="open">Open Variant B &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

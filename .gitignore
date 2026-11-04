@@ -1,0 +1,19 @@
+# Local tool/agent workspaces — not part of the site
+.agents/
+.aider-desk/
+.autohand/
+.claude/
+.commandcode/
+.openhands/
+.vscode/
+.zcode/
+skills/
+skills-lock.json
+
+# Design reference (Maison Ade template)
+Maison Ade*.html
+
+# OS / dependencies
+node_modules/
+.DS_Store
+Thumbs.db
