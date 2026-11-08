@@ -7,6 +7,9 @@ one product set, one photography set.
 | | Variant A, Warm gallery | Variant B, Midnight boutique |
 |---|---|---|
 | Where | `index.html` | `variant-b/index.html` |
+
+`shop.html` is the shared store catalog: best-seller cards on both variants link to it,
+it carries its own "Shop" nav link on both variants, and prices there are placeholders.
 | Theme | Light cream, locked | Deep ink, locked |
 | Type | Outfit, sentence case | Bricolage Grotesque, sentence case |
 | Shape system | Pills + 24px media + arch hero | Pills + 24px media + 32px feature panel |
@@ -60,26 +63,25 @@ Google Fonts here; self-host the woff2 files for production.
 
 ## Images
 
-All photography is hotlinked from Unsplash (free license) and was vision-verified to read
-as menswear editorial: garments on real people, full-body looks, warm consistent grading.
-A shared treatment in `styles.css` (`.photo`: saturate 0.88, contrast 1.03) unifies them
-further. Swap `src` URLs for real product photography at the same aspect ratios when you
-have it. URL template: `https://images.unsplash.com/{id}?q=80&w={w}&h={h}&fit=crop&auto=format`
+All photography is hotlinked from Unsplash (free license), vision-verified to show African
+menswear - agbada, senator sets, kaftans and ankara print sets - so the page reads as the
+brand it is. A shared treatment in `styles.css` (`.photo` / `.photo-b`) unifies the grading.
+Swap `src` URLs for real product photography at the same aspect ratios when you have it.
+URL template: `https://images.unsplash.com/{id}?q=80&w={w}&h={h}&fit=crop&auto=format`
 
 | Slot | Unsplash photo id | Crop |
 |---|---|---|
-| Hero: all-black overcoat look | `photo-1617137977259-bb83e191f377` | 900x1200 |
-| Range: Outerwear (belted overcoat) | `photo-1619603364904-c0498317e145` | 900x1100 |
-| Range: Tailoring (blue tweed three-piece) | `photo-1594938298603-c8148c4dae35` | 900x1100 |
-| Range: Shirting (white collar close-up) | `photo-1603252109612-24fa03d145c8` | 900x1100 |
-| Range: Knitwear (navy cardigan, tie) | `photo-1642886513133-cdbee2639272` | 900x1100 |
-| Best seller: The Camden Overcoat (beige trench) | `photo-1737508945707-ebdccee97cc5` | 640x840 |
-| Best seller: The Royal Suit (navy suit, buttoning) | `photo-1507679799987-c73779587ccf` | 640x840 |
-| Best seller: The City Shirt (all-black, crosswalk) | `photo-1645466478772-99f652533d44` | 640x840 |
-| Best seller: The Smart Layer (layered jacket) | `photo-1515938736719-95b568dc8dd8` | 640x840 |
-| Best seller: The Heavy Tee (boxy tee, terracotta) | `photo-1597436684771-9c1c4a4adce2` | 640x840 |
-| Fit promise (sewing machine, hands) | `photo-1606501126768-b78d4569d3f9` | 1000x1250 |
+| Hero (both variants): kaftan gown with kente panelling | `photo-1663044022648-08bf87cfdc05` | 1800x1200 |
+| Range: Agbada (satin agbada, studio) | `photo-1776880471112-708c211e6a4b` | 900x1100 |
+| Range: Senator wear (embroidered tunic) | `photo-1751374858042-b8b9ff8480aa` | 900x1100 |
+| Range: Trousers (kaftan with print trousers) | `photo-1791892135406-fbb706896cbe` | 900x1100 |
+| Range: Ankara sets (wax-print two-piece) | `photo-1790862303813-8fdee084284d` | 900x1100 |
+| Best seller: The Emerald Agbada | `photo-1663044022557-7d5d4c1d5318` | 640x840 |
+| Best seller: The Sky Senator | `photo-1751374881982-2a69257bd207` | 640x840 |
+| Best seller: The Kente Panel | `photo-1663043994777-7ed4b4e6cba3` | 640x840 |
+| Best seller: The Forest Set | `photo-1663044022726-889ee51a682e` | 640x840 |
+| Fit promise: wax print fabric bolts | `photo-1768212565424-efa3a3852b81` | 1000x1250 |
 
-The Best Sellers prices ($185, $240, $65, $150, $45) are placeholder copy, not real data;
-swap for real pricing (the reference shop, ellscrotchet.shop, lists prices in Naira).
+Prices on the Best Sellers sections and the Shop page are placeholder copy, not real
+data; swap for real pricing (the reference shop, ellscrotchet.shop, lists prices in Naira).
 # jude-s-cut

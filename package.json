@@ -1,0 +1,9 @@
+{
+	"name": "judes-cut",
+	"private": true,
+	"version": "0.1.0",
+	"description": "Jude's Cut landing page. Static HTML + Tailwind v4 (CDN) + vanilla JS. No dependencies.",
+	"scripts": {
+		"start": "npx -y serve -l 5173 ."
+	}
+}

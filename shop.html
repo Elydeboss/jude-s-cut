@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Shop | Jude's Cut</title>
+		<meta
+			name="description"
+			content="Shop Jude's Cut. Agbada, senator sets, kaftans and pant trousers, cut properly and made to be worn every week."
+		/>
+		<meta name="theme-color" content="#f6f1e7" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Icons: Phosphor regular weight, CDN. -->
+		<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<style type="text/tailwindcss">
+			@theme {
+				--color-cream: #f6f1e7;
+				--color-cream-deep: #eae2d0;
+				--color-ink: #1a1e26;
+				--color-ink-soft: #565d6e;
+				--color-royal: #00022e;
+				--color-royal-deep: #14175c;
+				--font-sans: 'Outfit', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+			}
+		</style>
+
+		<style>
+			.photo {
+				filter: saturate(0.88) contrast(1.03);
+				background-color: var(--color-cream-deep);
+			}
+
+			:focus-visible {
+				outline: 2px solid var(--color-royal);
+				outline-offset: 3px;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+
+	<body class="bg-cream font-sans leading-relaxed text-ink antialiased">
+		<header class="sticky top-0 z-50 border-b border-ink/15 bg-cream/90 backdrop-blur-md">
+			<nav class="mx-auto flex h-18 max-w-7xl items-center justify-between px-6" aria-label="Primary">
+				<a class="text-[1.3rem] font-semibold tracking-tight" href="index.html">
+					Jude&rsquo;s <span class="text-royal">Cut</span>
+				</a>
+				<a
+					class="inline-flex items-center gap-2 text-[0.95rem] font-medium text-ink-soft transition-colors hover:text-ink"
+					href="index.html"
+				>
+					<i class="ph ph-arrow-left" aria-hidden="true"></i>
+					Back to home
+				</a>
+			</nav>
+		</header>
+
+		<main class="py-[clamp(3.5rem,8vw,6rem)]">
+			<div class="mx-auto max-w-6xl px-6">
+				<header class="mx-auto mb-12 max-w-xl text-center">
+					<p class="text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-royal">The collection</p>
+					<h1 class="mt-3 text-[clamp(2rem,4vw,2.9rem)] font-semibold tracking-[-0.025em]">Shop Jude&rsquo;s Cut</h1>
+					<p class="mt-4 text-[1.05rem] text-ink-soft">
+						Agbada, senator sets, kaftans and pant trousers. Cut properly, worn every week.
+					</p>
+				</header>
+
+				<ul class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Agbada</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Emerald Agbada"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="640"
+									height="840"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1663044022557-7d5d4c1d5318?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Emerald Agbada</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$260</p>
+							</figcaption>
+						</figure>
+					</li>
+
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Senator wear</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Sky Senator"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="640"
+									height="840"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1751374881982-2a69257bd207?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Sky Senator</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$120</p>
+							</figcaption>
+						</figure>
+					</li>
+
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Kaftans</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Kente Panel"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="640"
+									height="840"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1663043994777-7ed4b4e6cba3?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Kente Panel</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$140</p>
+							</figcaption>
+						</figure>
+					</li>
+
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Two-piece</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Forest Set"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="640"
+									height="840"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1663044022726-889ee51a682e?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Forest Set</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$150</p>
+							</figcaption>
+						</figure>
+					</li>
+
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Agbada</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Rose Agbada"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="900"
+									height="1100"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1776880471112-708c211e6a4b?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Rose Agbada</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$240</p>
+							</figcaption>
+						</figure>
+					</li>
+
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Ankara sets</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Ankara Set"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="900"
+									height="1100"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1790862303813-8fdee084284d?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Ankara Set</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$95</p>
+							</figcaption>
+						</figure>
+					</li>
+
+					<li class="group">
+						<figure class="flex flex-col gap-3">
+							<p class="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">Senator wear</p>
+							<div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-cream-deep">
+								<img
+									alt="The Emerald Senator"
+									class="photo absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+									width="640"
+									height="840"
+									loading="lazy"
+									src="https://images.unsplash.com/photo-1648328168368-3a25f2152802?q=80&w=640&h=840&fit=crop&auto=format"
+								/>
+							</div>
+							<figcaption>
+								<h2 class="text-[1.05rem] font-semibold tracking-[-0.01em]">The Emerald Senator</h2>
+								<p class="mt-1 text-[0.9rem] text-ink-soft">$180</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+
+				<p class="mt-10 text-center text-[0.85rem] text-ink-soft">
+					To order, message us at
+					<a class="font-medium text-royal underline underline-offset-2 hover:text-royal-deep" href="mailto:hello@judescut.com">hello@judescut.com</a>.
+					Prices are placeholder until launch.
+				</p>
+			</div>
+		</main>
+
+		<footer class="border-t border-ink/15">
+			<div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-6 text-[0.85rem] text-ink-soft">
+				<p>&copy; 2026 Jude&rsquo;s Cut</p>
+				<p>Dress the part.</p>
+			</div>
+		</footer>
+	</body>
+</html>
