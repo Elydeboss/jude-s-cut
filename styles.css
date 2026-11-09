@@ -4,8 +4,10 @@
 	scrollbar hiding, the shared photo treatment, and the motion system.
 
 	Locks (page-wide, intentional):
-	- ONE theme: light cream. Locked per brief; no dark mode.
-	- ONE accent: royal blue, identically in every section.
+	- Base theme: light cream; no dark mode.
+	- Primary accent: royal blue, identically in every section.
+	- Sanctioned exception: the #promise heritage-dark band carries a contained
+	  gold accent (--color-gold) on the royal surface.
 	- Shape system: buttons pill, media 24px (rounded-3xl), the hero arch is the
 	  single signature shape.
 */
@@ -42,6 +44,11 @@ body {
 	outline-color: var(--color-cream);
 }
 
+/* Gold focus ring on the promise band (royal ring vanishes on royal). */
+#promise :focus-visible {
+	outline-color: var(--color-gold);
+}
+
 .scrollbar-none:focus-visible {
 	outline-offset: -2px;
 }
@@ -73,10 +80,12 @@ body {
 }
 
 /*
-	Scroll reveal. script.js adds .is-in once per element via IntersectionObserver;
-	never a scroll listener. --reveal-delay staggers siblings.
+	Scroll reveal. script.js adds .reveal-pending to <html> once it is actually running,
+	then adds .is-in per element via IntersectionObserver; never a scroll listener.
+	--reveal-delay staggers siblings. Hiding is scoped under .reveal-pending, so if the
+	script fails to load or run, everything below the hero simply stays visible.
 */
-.reveal {
+.reveal-pending .reveal {
 	opacity: 0;
 	transform: translateY(26px);
 	transition:
@@ -85,9 +94,48 @@ body {
 	transition-delay: var(--reveal-delay, 0s);
 }
 
-.reveal.is-in {
+.reveal-pending .reveal.is-in {
 	opacity: 1;
 	transform: none;
+}
+
+/*
+	Review carousel. Quotes stacked in one grid cell, so the tallest sets the height
+	and nothing jumps. script.js toggles .is-active on a 5s timer and pauses on hover;
+	the dots below jump to a review and restart the timer. Reduced motion: no
+	auto-rotation, dots still switch (an opacity fade is kept — it is not motion).
+*/
+.reviews {
+	display: grid;
+}
+
+.reviews > blockquote {
+	grid-area: 1 / 1;
+	opacity: 0;
+	transition: opacity 0.6s ease;
+}
+
+.reviews > blockquote.is-active {
+	opacity: 1;
+}
+
+.review-dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 999px;
+	background-color: rgba(26, 30, 38, 0.25);
+	transition:
+		width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+		background-color 0.3s ease;
+}
+
+.review-dot:hover {
+	background-color: rgba(26, 30, 38, 0.45);
+}
+
+.review-dot[aria-current='true'] {
+	width: 1.75rem;
+	background-color: var(--color-royal);
 }
 
 /* Hero entrance cascade. Load-once, then the page is still. */
